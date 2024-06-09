@@ -1,0 +1,87 @@
+/* CSS for Navbar */
+
+.container {
+    width: 100%;
+    background: radial-gradient(circle at 47% 51%, rgba(46, 189, 247, 1) 0%, rgba(19, 53, 111, 1) 100%);
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    padding: 10px 0; /* Vertical padding for spacing */
+  }
+  
+  .header-wrapper {
+    width: 90%; /* Width of the content inside the navbar */
+    display: flex;
+    justify-content: space-between; /* Space between logo and menu */
+    align-items: center; /* Center items vertically */
+  }
+  
+  .header-logo .logo img {
+    height: 50px; /* Height of the logo image */
+  }
+  
+  .menu-area {
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu ul {
+    list-style: none; /* Remove default list styling */
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu ul li {
+    margin-left: 20px; /* Space between menu items */
+  }
+  
+  .menu ul li a {
+    color: black; /* White text color for links */
+    text-decoration: none; /* Remove underline from links */
+    font-weight: bold; /* Bold text */
+    font-size: 20px; /* Font size for links */
+    padding: 8px 10px; /* Padding for clickable area */
+    position: relative; /* Positioning for the underline effect */
+    transition: color 0.3s; /* Smooth transition for color */
+}
+
+.menu ul li a::after {
+    content: ''; /* Empty content for the pseudo-element */
+    position: absolute;
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    display: block;
+    margin-top: 5px; /* Space between text and underline */
+    right: 0;
+    background: white; /* Color of the underline */
+    transition: width 0.3s ease; /* Smooth transition for the width */
+    -webkit-transition: width 0.3s ease;
+}
+
+.menu ul li a:hover::after {
+    width: 100%; /* Full width on hover */
+    left: 0;
+    right: auto;
+}
+  
+  /* Mobile responsive styles */
+  @media (max-width: 768px) {
+    .header-wrapper {
+      flex-direction: column; /* Stack logo and menu vertically on small screens */
+    }
+  
+    .menu ul {
+      flex-direction: column; /* Stack menu items vertically */
+    }
+  
+    .menu ul li {
+      margin-left: 0; /* Remove left margin for vertical stacking */
+      margin-bottom: 10px; /* Space between vertical menu items */
+    }
+    .navbar-line {
+      /* global 94%+ browsers support */
+      background: linear-gradient(90deg, rgba(114, 187, 208, 1) 0%, rgba(2, 4, 9, 1) 46%, rgba(114, 187, 208, 1) 100%);
+  }
+  
+  }
+  
